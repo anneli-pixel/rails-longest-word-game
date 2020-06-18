@@ -1,5 +1,11 @@
 class GamesController < ApplicationController
-  def new; end
+  def new
+    @letters = []
+    10.times do
+      @letters << ('A'..'Z').to_a.sample
+    end
+    @letters
+  end
 
   def score; end
 end
